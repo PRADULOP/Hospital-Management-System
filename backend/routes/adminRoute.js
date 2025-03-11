@@ -1,10 +1,9 @@
-import express from "express";
+import express from 'express';
+import { loginAdmin} from '../controllers/adminController.js';
 
-const router = express.Router();
+const adminRouter = express.Router();
 
-// Sample route
-router.get("/", (req, res) => {
-    res.send("Admin route is working!");
-});
+adminRouter.post("/login", loginAdmin)
 
-export default router;
+
+export default adminRouter;

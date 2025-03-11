@@ -1,10 +1,9 @@
-import express from "express";
+import express from 'express';
+import { loginDoctor} from '../controllers/doctorController.js';
 
-const router = express.Router();
+const doctorRouter = express.Router();
 
-// Sample route
-router.get("/", (req, res) => {
-    res.send("Doctor route is working!");
-});
+doctorRouter.post("/login", loginDoctor)
 
-export default router;
+
+export default doctorRouter;
